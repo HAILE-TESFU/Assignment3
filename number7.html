@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>ASSIGNMENT3</title>
+
+        <script>
+            function EmployeesWageAfterTaxPay(){
+                // INPUT= number of regular hours; emplyees wage per hr;tax;
+                // PROCESSING=(regularhr*employeesWage-regularhr*employeesWage*0.15);
+                // OUTPUT=EmployeesWageAfterTaxPay;
+
+                let RegularHrs=document.getElementById("rh").value;
+                let Wageperhr=document.getElementById("wh").value;
+                
+                let EmployeesWageAfterTaxPay=parseFloat(RegularHrs*Wageperhr-RegularHrs*Wageperhr*0.15);
+
+                document.getElementById("out").innerHTML=EmployeesWageAfterTaxPay;
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Heart Beat Range</h1>
+        Regular hour worked:
+        <input type="text" id="rh"><br><br>
+        Employees wage per hour:
+        <input type="text" id="wh"><br><br>
+        <button type="button" onclick="EmployeesWageAfterTaxPay()">calculate</button><br><br>
+        <div id="out"></div>
+        
+    </body>
+</html>

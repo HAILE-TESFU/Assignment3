@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>ASSIGNMENT3</title>
+
+        <script>
+            function DistanceMiles(){
+                // INPUT= distance in kilometers;
+                // PROCESSING=0.621371*kilometer;
+                // OUTPUT=distance in miles;
+
+                let DistanceKilometers=document.getElementById("dm").value;
+                let  distance=parseFloat(DistanceKilometers);
+                  
+                distance=0.621371*DistanceKilometers;
+
+                document.getElementById("out").innerHTML=distance;
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Distance in miles</h1>
+        <input type="text" id="dm"><br><br>
+        <button type="button" onclick="DistanceMiles()">calculate</button><br><br>
+        <div id="out"></div>
+    </body>
+</html>

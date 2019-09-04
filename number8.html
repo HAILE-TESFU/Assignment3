@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>ASSIGNMENT3</title>
+
+        <script>
+            function LengthOfCable(){
+                // INPUT= the cable span, the sagging or hogging of the cable;
+                // PROCESSING=(span+8*sagging square/(3*span));
+                // OUTPUT=LengthOfCable;
+
+                let CableSpan=document.getElementById("cs").value;
+                let CableSag=document.getElementById("csg").value;
+                
+                let LengthOfCable=parseFloat(CableSpan+8*Math.pow(CableSag,2)/(3*CableSpan));
+
+                document.getElementById("out").innerHTML=LengthOfCable;
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Heart Beat Range</h1>
+        Cable Span:
+        <input type="text" id="cs"><br><br>
+        Cable sagging:
+        <input type="text" id="csg"><br><br>
+        <button type="button" onclick="LengthOfCable()">calculate</button><br><br>
+        <div id="out"></div>
+        
+    </body>
+</html>

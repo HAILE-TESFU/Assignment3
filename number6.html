@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>ASSIGNMENT3</title>
+
+        <script>
+            function HeartBeatRange(){
+                // INPUT= age;
+                // PROCESSING=fastest heart beat and slowest heart beat;
+                // OUTPUT=HeartBeatRange;
+
+                let age=document.getElementById("ag").value;
+                
+                let SlowestHeartBeat=(220-age)*65/100;
+                let FastestHeartBeat=(220-age)*65/100;
+
+                let HeartBeatRange="SlowestHeartBeat:"+SlowestHeartBeat+"      "+"FastestHeartBeat: "+FastestHeartBeat;
+
+                document.getElementById("out").innerHTML=HeartBeatRange;
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Heart Beat Range</h1>
+        age:
+        <input type="text" id="ag"><br><br>
+        <button type="button" onclick="HeartBeatRange()">calculate</button><br><br>
+        <div id="out"></div>
+        
+    </body>
+</html>

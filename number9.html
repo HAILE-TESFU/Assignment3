@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>ASSIGNMENT3</title>
+
+        <script>
+            function VolumeOfSpaceInsideTire(){
+                // INPUT= width of tire millimeter,aspect ratio, diameter in inches;
+                // PROCESSING=(span+8*sagging square/(3*span));
+                // OUTPUT=LengthOfCable;
+
+                let TireWidth=document.getElementById("tw").value;
+                const AspectRatio=document.getElementById("ar").value;
+                let TireDiameter=document.getElementById("td").value;
+                
+                let VolumeOfSpaceInsideTire=parseFloat(Math.PI*Math.pow(TireWidth,2)*AspectRatio*(AspectRatio*TireWidth+2540*TireDiameter)/(10000000.0));
+
+                document.getElementById("out").innerHTML=VolumeOfSpaceInsideTire;
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Heart Beat Range</h1>
+        Tire width:
+        <input type="text" id="tw"><br><br>
+        Aspect Ratio:
+        <input type="text" id="ar"><br><br>
+        Tire diameter:
+        <input type="text" id="td"><br><br>
+        <button type="button" onclick="VolumeOfSpaceInsideTire()">calculate</button><br><br>
+        <div id="out"></div>
+        
+    </body>
+</html>

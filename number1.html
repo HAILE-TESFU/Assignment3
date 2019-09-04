@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>ASSIGNMENT3</title>
+
+        <script>
+            function VolumeLitres(){
+                // INPUT= volume in quarts;
+                // PROCESSING=0.946353*volume in quarts;
+                // OUTPUT=Volume in litres;
+
+                let VolumeQuarts=document.getElementById("vq").value;
+                let  volume=parseFloat(VolumeQuarts);
+                  
+                   volume=0.946353*VolumeQuarts;
+
+                document.getElementById("out").innerHTML=volume;
+            }
+        </script>
+    </head>
+    <body>
+        Volume in litres:
+        <h1> VOLUME IN LITRES</h1>
+        <input type="text" id="vq"><br><br>
+        <button type="button" onclick="VolumeLitres()">calculate</button><br><br>
+        <div id="out"></div>
+    </body>
+</html>

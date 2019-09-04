@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>ASSIGNMENT3</title>
+
+        <script>
+            function MilageViheclePerGalon(){
+                // INPUT= beginning and ending reading of odemeter reading and number of galons of gasoline;
+                // PROCESSING=(ending reading-beginning reading)/number of galons
+                // OUTPUT=MilageViheclePerGa;
+
+                let begginingreading=document.getElementById("br").value;
+                let endingReading=document.getElementById("er").value;
+                let numberGalons=document.getElementById("gl").value;
+                let MilageViheclePerGalon=parseFloat((endingReading-begginingreading)/numberGalons);
+
+                document.getElementById("out").innerHTML=MilageViheclePerGalon;
+            }
+        </script>
+    </head>
+    <body>
+        <h1> MilageViheclePerGalon</h1>
+        <input type="text" id="br"><br><br>
+        <input type="text" id="er"><br><br>
+        <input type="text" id="gl"><br><br>
+        <button type="button" onclick="MilageViheclePerGalon()">calculate</button><br><br>
+        <div id="out"></div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>ASSIGNMENT3</title>
+
+        <script>
+            function NumberStacks(){
+                // INPUT= number of boxes and boxes in each stack;
+                // PROCESSING=0.621371*kilometer;
+                // OUTPUT=number of stacks;
+
+                let numberBoxes=document.getElementById("bx").value;
+                let BoxesStack=document.getElementById("bs").value;
+                let numberStacks=parseInt(numberBoxes/BoxesStack);
+
+                  if(numberBoxes%BoxesStack===0){
+                    numberStacks=numberBoxes/BoxesStack;
+                  }
+                       
+                   else {numberStacks=parseInt(numberBoxes/BoxesStack)+1;}
+
+                document.getElementById("out").innerHTML=numberStacks;
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Number of stacks</h1>
+        <input type="text" id="bx"><br><br>
+        <input type="text" id="bs"><br><br>
+        <button type="button" onclick="NumberStacks()">calculate</button><br><br>
+        <div id="out"></div>
+    </body>
+</html>
